@@ -1,38 +1,211 @@
-.App {
-  text-align: center;
+body{
+  margin:0px
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+span{
+  padding: 0px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*#region addMovieComponent*/
+.addMovieComponent{
+  padding-bottom: 1em;
+height: 30vh;
+background-color: whitesmoke;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputsColumn{
   display: flex;
+  justify-content: center;
+
+}
+input{
+  margin-top: 3em;
+  text-align: center;
+  height: 2em;
+  border-radius: 10px;
+  border: 2px solid rgba(4,230,150,1);
+  color: blaCK;
+}
+input[type="text"]{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.inputBox{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
   flex-direction: column;
+  width: 40vw;
+}
+.inputBox p{
+ text-align: center;
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: bold;
+}
+.submitButton{
+  width: 100px;
+  color: #f29b37;
+  border-radius: 10px;
+  border: 1.5px solid #f29b37;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  height: 2em;
+  display: flex;
+  align-items:center ;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.addGenreButton{
+  width: 50%;
+  color: #f29b37;
+  border-radius: 10px;
+  height: 2em; 
+  border: 1.5px solid #f29b37;
+  margin-top: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items:center ;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.genreDisplayBox{
+  margin-top: 0.2em;
+  width: 100%;
+  height:4em ;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+/*#endregion addMovieComponent*/
+/*#region genreTagComponent*/
+.genreTag{
+  height: 1.4em;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 0.3rem;
+  margin-right: 0.3em;
+  display: flex;
+  align-items:center ;
+  justify-content: flex-start;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+.deleteTag{
+  font-family: Arial, Helvetica, sans-serif;
+background-color: #17D583;
+border-radius: 20px;
+margin-left: 0.4em;
+}
+/*#endregion genreTagComponent*/
+/*#region movieListComponent*/
+
+.movieListComponent{
+  width: 100%;
+  height: 70vh;
+}
+.movieRow{
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  background-color: #17D583;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.genreInputsWrap{
+  padding: 0px !important;
+  align-items: center;
+  display: flex;
+  max-width: 70%;
+  overflow-x: scroll;
+  margin-left: auto;
+  margin-right: auto;
+}
+.filterListComponent{
+  padding-top: 0.4em;
+  padding-bottom: 0.5em;
+  display: flex;
+  width: 100%;
+  height: 1em;
+  background-color: whitesmoke;
+}
+.filterComponent{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+.radioButton{
+  border-radius: 100px;
+  background-color: white;
+  width: 1em;
+  height: 1em;
+}
+.clicked{
+  background-color: #f29b37;
+}
+.textInputFilter{
+  margin-left: 0.2em;
+  font-family: Arial, Helvetica, sans-serif;
+font-size: 1em;
+}
+.watchedRowWrap{
+  margin-left: auto;
+  margin-right: auto;
+}
+.deleteRowWrap{
+  margin-left: auto;
+margin-right: 0.5em;
+}
+.nameRowWrap{
+  margin-left: 0.5em;
+}
+.searchByName input{
+  margin: 0px;
+  width: 50%;
+}
+.searchByName{
+  padding-bottom: 0.5em;
+  background-color: whitesmoke;
+display: flex;
+justify-content: center;
+}
+.searchButton{
+  width: 100px;
+  border: 1.5px solid #f29b37;
+  border-radius: 9px;
+  margin-left: 1em;
+  height: 2em;
+  display: flex;
+  align-items:center ;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+/*#endregion movieListComponent*/
+/*#region spinner*/
+.spinner{
+  display:flex ;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  height: 70vh;
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+}
+.hidden{
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*#endregion spinner*/
