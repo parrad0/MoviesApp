@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
 import * as serviceWorker from './serviceWorker';
-import MoviesApp from './view/MoviesApp';
+import AppView from './view/AppView/AppView';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MoviesApp />
+    <AppView />
   </React.StrictMode>,
   document.getElementById('root')
 );
